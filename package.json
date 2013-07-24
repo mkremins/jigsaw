@@ -1,0 +1,16 @@
+{
+	"name": "jigsaw",
+	"version": "v0.1.0",
+	"description": "Plugin loader for extensible node.js projects",
+	"keywords": ["plugin", "plugins", "loader"],
+
+	"author": "Max Kreminski",
+	"homepage": "http://github.com/mkremins/jigsaw",
+	"bugs": "http://github.com/mkremins/jigsaw/issues",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/mkremins/jigsaw.git"
+	}
+
+	"main": "./index.js",
+}
