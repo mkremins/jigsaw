@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var util = require('util');
+var EventEmitter = require('events').EventEmitter;
 
 function PluginLoader(pluginsDir) {
 	this._dir = pluginsDir;
@@ -15,6 +16,7 @@ PluginLoader.prototype.load = function(filename, api) {
 	try {
 		plugin = require(self._dir + '/' + filename);
 		plugin.enable(api);
+		plugin.filename = filename;
 		plugin.name = plugin.name || filename.split('.')[0];
 		self._plugins[plugin.name] = plugin;
 		self.emit('load', plugin);
@@ -25,7 +27,7 @@ PluginLoader.prototype.load = function(filename, api) {
 
 PluginLoader.prototype.loadAll = function(api) {
 	var self = this;
-	fs.readdir(self._dir, function(filenames) {
+	fs.readdir(self._dir, function(err, filenames) {
 		filenames.forEach(function(filename) {
 			self.load(filename, api);
 		});
