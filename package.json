@@ -10,7 +10,8 @@
 	"repository": {
 		"type": "git",
 		"url": "http://github.com/mkremins/jigsaw.git"
-	}
+	},
+	"license": "MIT",
 
-	"main": "./index.js",
+	"main": "./index.js"
 }

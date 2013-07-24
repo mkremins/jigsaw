@@ -45,3 +45,8 @@ usage
     	name: 'MyPlugin',  // optional – if not provided, defaults to name of file containing plugin code
     	...
     };
+
+license
+---------------------------------------
+
+jigsaw is made available under the [MIT License](http://opensource.org/licenses/MIT). See [LICENSE](LICENSE) for details.
